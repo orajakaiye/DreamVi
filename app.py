@@ -1,4 +1,3 @@
-pip install streamlit openai-whisper moviepy ffmpeg-python
 import streamlit as st
 import whisper
 from moviepy.editor import VideoFileClip, concatenate_videoclips
@@ -62,5 +61,3 @@ if uploaded_files:
             st.video(output_path)
             with open(output_path, "rb") as file:
                 st.download_button("⬇️ Download Final Video", file, file_name="final_video.mp4")
-
-streamlit run app.py
